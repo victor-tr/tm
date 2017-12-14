@@ -1,0 +1,205 @@
+…or create a new repository on the command line
+
+echo "# tm" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/victor-tr/tm.git
+git push -u origin master
+…or push an existing repository from the command line
+
+git remote add origin https://github.com/victor-tr/tm.git
+git push -u origin master
+
+//////////////////////////////////////////////
+
+
+
+$ git config --global user.name ""
+
+$ git config --global user.email ""
+
+
+Cibermag@Cibermag--- MINGW64 ~
+$ git config --list
+core.symlinks=false
+core.autocrlf=true
+core.fscache=true
+color.diff=auto
+color.status=auto
+color.branch=auto
+color.interactive=true
+help.format=html
+rebase.autosquash=true
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+http.sslbackend=openssl
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+core.editor=nano.exe
+user.name=Victor Tr
+user.email=vic.box.1970@gmail.com
+gui.recentrepo=D:/testgit
+
+
+Cibermag@Cibermag--- MINGW64 ~
+$ cd d:/1
+
+Cibermag@Cibermag--- MINGW64 /d/1
+$ git init
+Initialized empty Git repository in D:/1/.git/
+
+Cibermag@Cibermag--- MINGW64 /d/1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        git_help.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Cibermag@Cibermag--- MINGW64 /d/1 (master)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        git_help.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Cibermag@Cibermag--- MINGW64 /d/1 (master)
+$ git add .
+
+Cibermag@Cibermag--- MINGW64 /d/1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   git_help.txt
+
+
+Cibermag@Cibermag--- MINGW64 /d/1 (master)
+$ git commit -m "first commit"
+[master (root-commit) 213fd45] first commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 git_help.txt
+
+Cibermag@Cibermag--- MINGW64 /d/1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Cibermag@Cibermag--- MINGW64 /d/1 (master)
+$ git remote add origin https://github.com/victor-tr/tm.git
+
+Cibermag@Cibermag--- MINGW64 /d/1 (master)
+$ git push -u origin master
+Username for 'https://github.com': victor-tr
+gclipperCounting objects: 3, done.
+Writing objects: 100% (3/3), 217 bytes | 217.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/victor-tr/tm.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+Cibermag@Cibermag--- MINGW64 /d/1 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   git_help.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Cibermag@Cibermag--- MINGW64 /d/1 (master)
+$ git add .
+
+Cibermag@Cibermag--- MINGW64 /d/1 (master)
+$ git commit -m "2 commit"
+[master 3b38e35] 2 commit
+ 1 file changed, 45 insertions(+)
+
+Cibermag@Cibermag--- MINGW64 /d/1 (master)
+$ git push -u origin master
+Username for 'https://github.com': victor-tr
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 733 bytes | 733.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/victor-tr/tm.git
+   213fd45..3b38e35  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+Cibermag@Cibermag--- MINGW64 /d/1 (master)
+$ git clone https://github.com/victor-tr/tm.git
+Cloning into 'tm'...
+remote: Counting objects: 6, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 6 (delta 0), reused 6 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), done.
+
+Cibermag@Cibermag--- MINGW64 /d/1 (master)
+$ git add .
+warning: adding embedded git repository: tm
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> tm
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached tm
+hint:
+hint: See "git help submodule" for more information.
+
+Cibermag@Cibermag--- MINGW64 /d/1 (master)
+$ git commit -m "3 commit"
+[master 284c2cc] 3 commit
+ 2 files changed, 1 insertion(+), 45 deletions(-)
+ delete mode 100644 git_help.txt
+ create mode 160000 tm
+
+Cibermag@Cibermag--- MINGW64 /d/1 (master)
+$ git push -u origin master
+Username for 'https://github.com': victor-tr
+Counting objects: 2, done.
+Writing objects: 100% (2/2), 225 bytes | 225.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0)
+To https://github.com/victor-tr/tm.git
+   3b38e35..284c2cc  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+Cibermag@Cibermag--- MINGW64 /d/1 (master)
+$
+
+
+
+
