@@ -1,0 +1,45 @@
+…or create a new repository on the command line
+
+echo "# tm" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/victor-tr/tm.git
+git push -u origin master
+…or push an existing repository from the command line
+
+git remote add origin https://github.com/victor-tr/tm.git
+git push -u origin master
+
+//////////////////////////////////////////////
+
+
+
+$ git config --global user.name ""
+
+$ git config --global user.email ""
+
+$ git config --list
+core.symlinks=false
+core.autocrlf=true
+core.fscache=true
+color.diff=auto
+color.status=auto
+color.branch=auto
+color.interactive=true
+help.format=html
+rebase.autosquash=true
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+http.sslbackend=openssl
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+core.editor=nano.exe
+user.name=Victor Tr
+user.email=vic.box.1970@gmail.com
+gui.recentrepo=D:/testgit
+
+
+
